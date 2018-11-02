@@ -4,6 +4,7 @@ PHPの勉強道
 ```
 PHPで作ったページをブラウザで見る方法
 1. PHPの簡易サーバーを起動（ターミナル）
-php -S localhost:8000
+ cd php
+ php -S localhost:8000
 2. ブラウザで localhost:8000 にアクセス
 ```
