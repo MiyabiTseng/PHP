@@ -1,21 +1,3 @@
-<?php
-/*
-這邊不用特別寫,$_POSTを使ったら下面的部分自己在背後處理。
-php原本就有的功能
-array(
-  'name' => 'にんじゃわんこ',
-  'email' => 'tseng@aa.com'
-);
-*/
-//print_r($_POST);  //<-加這行的話，在網頁上可以看到背後處理的code(網頁上使用developer tools)
-
-echo $_POST['name'];
-echo $_POST['email'];
-
-?>
-
-
-<!--$_POSTの練習  -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,21 +20,20 @@ echo $_POST['email'];
   <div class="main">
     <div class="thanks-message">お問い合わせいただきありがとうございます。</div>
     <div class="display-contact">
-
       <div class="form-title">入力内容</div>
 
       <div class="form-item">■ 名前</div>
-      <!-- nameを受け取りechoしましょう -->
-     <?php
-     echo $_POST['name'];
-     ?>
-      <div class="form-item">■ 内容</div>
-      <!-- bodyを受け取りechoしましょう -->
-   <?php
-    echo $_POST['body'];
-    ?>
-    </div>
+      <?php echo $_POST['name'] ?>
 
+      <div class="form-item">■ 年齢</div>
+      <?php echo $_POST['age'] ?>
+
+      <div class="form-item">■ お問い合わせの種類</div>
+      <!-- この下でcategoryを受け取りechoしましょう -->
+      <?php echo $_POST['category'];?>
+      <div class="form-item">■ 内容</div>
+      <?php echo $_POST['body'] ?>
+    </div>
   </div>
 
   <div class="footer">
@@ -64,12 +45,8 @@ echo $_POST['email'];
       </ul>
     </div>
     <div class="like-box">
-      <iframe src="https://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FProgate%2F742679992421539" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:300px;" allowTransparency="true"></iframe>
+      <iframe src="https://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FProgate%2F742679992421539&amp;show_faces=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:300px;" allowTransparency="true"></iframe>
     </div>
   </div>
 </body>
 </html>
-
-<?php
-echo $_POST['animal'];
- ?>
